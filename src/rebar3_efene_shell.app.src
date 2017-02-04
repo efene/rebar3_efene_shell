@@ -10,6 +10,6 @@
   {modules, []},
 
   {maintainers, ["Mariano Guerra"]},
-  {licenses, ["MIT"]},
+  {licenses, ["APL"]},
   {links, [{"Github", "https://github.com/efene/rebar3_efene_shell"}]}
  ]}.

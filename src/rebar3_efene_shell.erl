@@ -1,4 +1,7 @@
 -module(rebar3_efene_shell).
+-author("Kresten Krab Thorup <krab@trifork.com>").
+-author("Fred Hebert <mononcqc@ferd.ca>").
+-author("Mariano Guerra <mariano@marianoguerra.org>").
 
 -behaviour(provider).
 
