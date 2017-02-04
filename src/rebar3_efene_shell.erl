@@ -197,7 +197,11 @@ rewrite_leaders(OldUser, NewUser) ->
 
 setup_paths(State) ->
     %% Add deps to path
-    code:add_pathsa(rebar_state:code_paths(State, all_deps)),
+    AppsPaths = [rebar_app_info:ebin_dir(AppInfo) ||
+                 AppInfo <-  rebar_state:project_apps(State)],
+    DepsPaths = rebar_state:code_paths(State, all_deps),
+    Paths = AppsPaths ++ DepsPaths,
+    code:add_pathsa(Paths),
     %% add project app test paths
     ok = add_test_paths(State).
 
